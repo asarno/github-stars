@@ -3,8 +3,8 @@ import { FlexColumn } from './styled';
 import { Tabs, Tab, TextField, Button } from '@material-ui/core';
 
 interface Props {
-    setQuery: (newValue: any) => void;
-    setType: (newValue: any) => void;
+    setQuery: (newValue: string) => void;
+    setType: (newValue: string) => void;
     type: string;
 }
 

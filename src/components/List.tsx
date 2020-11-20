@@ -1,26 +1,10 @@
 import React from 'react';
-import { FlexColumn, FlexRow } from './styled';
+import { Avatar, FlexColumn, FlexRow, Name } from './styled';
 import { useSearch } from '../hooks/search';
 import Loader from './Loader';
 import Repository from './Repository';
 
 import { RepositoryProps } from '../api/search';
-import styled from 'styled-components';
-
-const Avatar: any = styled.div`
-    border-radius: 50%;
-    background: ${({ src }: any) => `url('${src}')`};
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
-    margin-bottom: 0.5rem;
-`;
-
-const Name: any = styled.span`
-    font-size: 1.3rem;
-`;
 
 interface Props {
     query: string;
