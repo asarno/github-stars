@@ -5,7 +5,7 @@ import List from './List';
 
 function Home() {
   const [query, setQuery] = useState('');
-  const [type, setType] = useState('user');
+  const [type, setType] = useState('users');
 
   return (
     <Container>

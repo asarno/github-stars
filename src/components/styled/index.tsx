@@ -15,6 +15,7 @@ const FlexRow = styled.div`
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    max-width: 80vw;
     flex-wrap: wrap;
 `;
 
