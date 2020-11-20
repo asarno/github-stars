@@ -16,7 +16,7 @@ function List({
     type,
 }: Props) {
     const { data, error, isLoading } = useSearch(query, type);
-        
+
     return (
         <FlexColumn>
 
@@ -28,7 +28,7 @@ function List({
             </FlexColumn>
 
             <FlexRow style={{ justifyContent: 'center' }}>
-                {data && data.repos?.length > 0 && data.repos.map((repo: RepositoryProps) => <Repository key={repo.id} {...repo} /> )}
+                {data && data.repos?.length > 0 && data.repos.map((repo: RepositoryProps) => <Repository key={repo.id} {...repo} />)}
             </FlexRow>
 
             {error && <span>Error: {error.response.data.message}</span>}

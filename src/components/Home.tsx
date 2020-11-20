@@ -6,7 +6,7 @@ import List from './List';
 function Home() {
   // this is the user entered name to be queried
   const [query, setQuery] = useState('');
-    // there is a toggle between 'user' & 'organization' when performing a search, which is passed into the search componenr
+  // there is a toggle between 'user' & 'organization' when performing a search, which is passed into the search component
   const [type, setType] = useState('users');
 
   return (

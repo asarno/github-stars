@@ -53,6 +53,6 @@ export async function search(name: string, type: string): Promise<any> {
         const { status, data } = await authedFetcher.get(`/${type}/${name}/repos`);
         assert.equal(status, 200);
         return transformData(data);
-    } 
+    }
     return [];
 }

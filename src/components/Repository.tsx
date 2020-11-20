@@ -10,7 +10,7 @@ function Repository({
     url,
 }: RepositoryProps) {
     return (
-        <StyledPaper 
+        <StyledPaper
             onClick={() => window.open(url, "_blank")}
         >
             <FlexColumn
