@@ -3,19 +3,22 @@ import { Container } from './styled';
 import Search from './Search';
 import List from './List';
 
-const initialState = '';
-
 function Home() {
-  const [query, setQuery] = useState(initialState);
+  const [query, setQuery] = useState('');
+  const [type, setType] = useState('user');
 
   return (
     <Container>
+
       <Search
+        type={type}
+        setType={setType}
         setQuery={setQuery}
       />
 
-      <List 
-        query={query} 
+      <List
+        query={query}
+        type={type}
       />
 
     </Container>

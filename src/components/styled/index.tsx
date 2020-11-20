@@ -5,8 +5,9 @@ const Container = styled.div`
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    margin-top: 2rem;
 `;
 
 const FlexRow = styled.div`
@@ -22,6 +23,7 @@ const FlexColumn = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 1rem;
 `;
 
 const Link = styled.span`

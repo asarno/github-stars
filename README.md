@@ -1,1 +1,1 @@
-**stock ticker widget**
+**github stars**

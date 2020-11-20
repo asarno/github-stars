@@ -1,21 +1,32 @@
 import React from 'react';
+import { FlexColumn } from './styled';
 import { useSearch } from '../hooks/search';
-import { Container } from './styled';
+import Loader from './Loader';
 
 interface Props {
     query: string;
+    type: string;
 }
 
 function List({
-    query
+    query,
+    type,
 }: Props) {
-    const options = useSearch(query);
-    console.log('options', options);
-  return (
-    <Container>
-        todo
-    </Container>
-  );
+    const { data, error, isLoading } = useSearch(query, type);
+    
+    console.log({ data, error, isLoading });
+    
+    return (
+        <FlexColumn>
+
+            {isLoading && <Loader isLoading />}
+
+            {/* {options.length > 0 && options.map((op: any) => {
+                return <span>lol</span>
+            })} */}
+
+        </FlexColumn>
+    );
 }
 
 export default List;
