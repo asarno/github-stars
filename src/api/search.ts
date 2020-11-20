@@ -10,7 +10,10 @@ function transformData(data:Repo[]) {
 }
 
 export async function search(name: string, type: string): Promise<Repo[]> {
-    const { status, data } = await authedFetcher.get(`/${type}/${name}/repos`);
-    assert.equal(status, 200);
-	return transformData(data);
+    if (name !== "") {
+        const { status, data } = await authedFetcher.get(`/${type}/${name}/repos`);
+        assert.equal(status, 200);
+        return transformData(data);
+    } 
+    return [];
 }
