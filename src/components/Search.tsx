@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FlexColumn } from './styled';
 import { Tabs, Tab, TextField, Button } from '@material-ui/core';
+import { useKeyPress } from '../hooks/keypress';
 
 interface Props {
     setQuery: (newValue: string) => void;
@@ -14,6 +15,11 @@ const Search: React.FC<Props> = ({
     setType,
 }) => {
     const [value, setValue] = useState('');
+    const hitEnter = useKeyPress('Enter');
+
+    if (hitEnter) {
+        setQuery(value);
+    }
 
     return (
             <FlexColumn>
